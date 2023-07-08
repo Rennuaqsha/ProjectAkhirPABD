@@ -1,6 +1,6 @@
 ﻿namespace ProjectAkhirPABD
 {
-    partial class Jaminan
+    partial class Costumer
     {
         /// <summary>
         /// Required designer variable.
@@ -28,136 +28,172 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.CostumerId = new System.Windows.Forms.Label();
+            this.NamaCos = new System.Windows.Forms.Label();
+            this.Alamat = new System.Windows.Forms.Label();
+            this.NoTelp = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.Add = new System.Windows.Forms.Button();
+            this.Save = new System.Windows.Forms.Button();
+            this.Clear = new System.Windows.Forms.Button();
+            this.Next = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(151, 270);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Costumer id ";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label2.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(151, 147);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 25);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Jaminan id";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label3.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(151, 208);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(124, 25);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Jenis Jaminan";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(393, 147);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(150, 22);
-            this.textBox1.TabIndex = 3;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(393, 275);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(150, 22);
-            this.textBox2.TabIndex = 4;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label4.Font = new System.Drawing.Font("Impact", 19.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(259, 23);
+            this.label4.Location = new System.Drawing.Point(281, 21);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(214, 42);
+            this.label4.Size = new System.Drawing.Size(209, 41);
             this.label4.TabIndex = 5;
             this.label4.Text = "Nanang Futsal";
             // 
-            // button1
+            // CostumerId
             // 
-            this.button1.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(156, 354);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 33);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = true;
+            this.CostumerId.AutoSize = true;
+            this.CostumerId.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.CostumerId.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CostumerId.Location = new System.Drawing.Point(142, 125);
+            this.CostumerId.Name = "CostumerId";
+            this.CostumerId.Size = new System.Drawing.Size(110, 25);
+            this.CostumerId.TabIndex = 6;
+            this.CostumerId.Text = "Costumer Id";
             // 
-            // button2
+            // NamaCos
             // 
-            this.button2.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(344, 354);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(80, 33);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Save";
-            this.button2.UseVisualStyleBackColor = true;
+            this.NamaCos.AutoSize = true;
+            this.NamaCos.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.NamaCos.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NamaCos.Location = new System.Drawing.Point(142, 183);
+            this.NamaCos.Name = "NamaCos";
+            this.NamaCos.Size = new System.Drawing.Size(140, 25);
+            this.NamaCos.TabIndex = 7;
+            this.NamaCos.Text = "Nama Costumer";
             // 
-            // button3
+            // Alamat
             // 
-            this.button3.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(543, 354);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(83, 33);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Clear";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.Alamat.AutoSize = true;
+            this.Alamat.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Alamat.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Alamat.Location = new System.Drawing.Point(142, 243);
+            this.Alamat.Name = "Alamat";
+            this.Alamat.Size = new System.Drawing.Size(68, 25);
+            this.Alamat.TabIndex = 8;
+            this.Alamat.Text = "Alamat";
             // 
-            // comboBox1
+            // NoTelp
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(393, 208);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(150, 24);
-            this.comboBox1.TabIndex = 9;
+            this.NoTelp.AutoSize = true;
+            this.NoTelp.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.NoTelp.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NoTelp.Location = new System.Drawing.Point(142, 303);
+            this.NoTelp.Name = "NoTelp";
+            this.NoTelp.Size = new System.Drawing.Size(132, 25);
+            this.NoTelp.TabIndex = 9;
+            this.NoTelp.Text = "Nomor Telepon";
             // 
-            // Jaminan
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(410, 130);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(181, 22);
+            this.textBox1.TabIndex = 10;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(410, 188);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(181, 22);
+            this.textBox2.TabIndex = 11;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(410, 248);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(181, 22);
+            this.textBox3.TabIndex = 12;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(410, 303);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(181, 22);
+            this.textBox4.TabIndex = 13;
+            // 
+            // Add
+            // 
+            this.Add.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Add.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Add.Location = new System.Drawing.Point(147, 371);
+            this.Add.Name = "Add";
+            this.Add.Size = new System.Drawing.Size(91, 35);
+            this.Add.TabIndex = 14;
+            this.Add.Text = "Add";
+            this.Add.UseVisualStyleBackColor = false;
+            // 
+            // Save
+            // 
+            this.Save.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Save.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Save.Location = new System.Drawing.Point(319, 371);
+            this.Save.Name = "Save";
+            this.Save.Size = new System.Drawing.Size(91, 35);
+            this.Save.TabIndex = 15;
+            this.Save.Text = "Save";
+            this.Save.UseVisualStyleBackColor = false;
+            // 
+            // Clear
+            // 
+            this.Clear.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Clear.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Clear.Location = new System.Drawing.Point(500, 371);
+            this.Clear.Name = "Clear";
+            this.Clear.Size = new System.Drawing.Size(91, 35);
+            this.Clear.TabIndex = 16;
+            this.Clear.Text = "Clear";
+            this.Clear.UseVisualStyleBackColor = false;
+            // 
+            // Next
+            // 
+            this.Next.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Next.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Next.Location = new System.Drawing.Point(648, 210);
+            this.Next.Name = "Next";
+            this.Next.Size = new System.Drawing.Size(91, 35);
+            this.Next.TabIndex = 17;
+            this.Next.Text = "Next";
+            this.Next.UseVisualStyleBackColor = false;
+            // 
+            // Costumer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::ProjectAkhirPABD.Properties.Resources.NanangFutsal;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.Next);
+            this.Controls.Add(this.Clear);
+            this.Controls.Add(this.Save);
+            this.Controls.Add(this.Add);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.NoTelp);
+            this.Controls.Add(this.Alamat);
+            this.Controls.Add(this.NamaCos);
+            this.Controls.Add(this.CostumerId);
+            this.Controls.Add(this.label4);
             this.DoubleBuffered = true;
-            this.Name = "Jaminan";
-            this.Text = "Jaminan";
+            this.Name = "Costumer";
+            this.Text = "Costumer";
             this.Load += new System.EventHandler(this.Jaminan_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -165,16 +201,18 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label CostumerId;
+        private System.Windows.Forms.Label NamaCos;
+        private System.Windows.Forms.Label Alamat;
+        private System.Windows.Forms.Label NoTelp;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Button Add;
+        private System.Windows.Forms.Button Save;
+        private System.Windows.Forms.Button Clear;
+        private System.Windows.Forms.Button Next;
     }
 }

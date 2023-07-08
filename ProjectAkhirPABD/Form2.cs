@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProjectAkhirPABD
 {
-    public partial class Jaminan : Form
+    public partial class Costumer : Form
     {
-        public Jaminan()
+        public Costumer()
         {
             InitializeComponent();
         }
