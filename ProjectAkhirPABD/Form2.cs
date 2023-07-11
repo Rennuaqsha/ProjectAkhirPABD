@@ -14,8 +14,9 @@ namespace ProjectAkhirPABD
 {
     public partial class Costumer : Form
     {
-        private string stringConnection = "DESKTOP-6I7FGSP\\NEMBOO\\SQLQuery1;" + "database=Service;User ID=sa;Password=123";
+        private string stringConnection = "Data Source=NanangFutsal;Initial Catalog=Customer;Persist Security Info=True;User ID=sa;Password=123";
         private SqlConnection koneksi;
+
         private void refreshform()
         {
             cosId.Text = "";
@@ -23,9 +24,9 @@ namespace ProjectAkhirPABD
             nmCos.Text = "";
             nmCos.Enabled = false;
             Almt.Text = "";
-            Almt.Enabled = false;
+            Alamat.Enabled = false;
             NoTelp.Text = "";
-            Add.Enabled = false;
+            Add.Enabled = true;
             Save.Enabled = false;
             Clear.Enabled = false;
             Next.Enabled = false;
@@ -60,6 +61,7 @@ namespace ProjectAkhirPABD
             nmCos.Enabled = true;
             Almt.Enabled = true;
             NoTelp.Enabled = true;
+            Add.Enabled = true;
             Save.Enabled = true;
             Clear.Enabled = true;
             Next.Enabled = true;
@@ -111,7 +113,7 @@ namespace ProjectAkhirPABD
         private void dataGridView()
         {
             koneksi.Open();
-            string str = "select customer_Id, nama_customer, alamat, no_telepon from dbo.customer";
+            string str = "select customer_Id, nama_customer, alamat, no_telepon from dbo.Customer";
             SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -124,7 +126,7 @@ namespace ProjectAkhirPABD
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
-                cosId.Text = row.Cells["CustomerId"].Value.ToString();
+                cosId.Text = row.Cells["customer_id"].Value.ToString();
                 nmCos.Text = row.Cells["nama_customer"].Value.ToString();
                 Alamat.Text = row.Cells["alamat"].Value.ToString();
                 Alamat.Text = row.Cells["no_telepon"].Value.ToString();
@@ -137,6 +139,19 @@ namespace ProjectAkhirPABD
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void Clear_Click(object sender, EventArgs e)
+        {
+            refreshform();
+        }
+
+        private void Next_Click(object sender, EventArgs e)
+        {
+             Jaminan jaminan = new Jaminan();
+            jaminan.Show();
+            this.Hide();
 
         }
     }

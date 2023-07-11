@@ -162,6 +162,7 @@
             this.Clear.TabIndex = 16;
             this.Clear.Text = "Clear";
             this.Clear.UseVisualStyleBackColor = false;
+            this.Clear.Click += new System.EventHandler(this.Clear_Click);
             // 
             // Next
             // 
@@ -173,6 +174,7 @@
             this.Next.TabIndex = 17;
             this.Next.Text = "Next";
             this.Next.UseVisualStyleBackColor = false;
+            this.Next.Click += new System.EventHandler(this.Next_Click);
             // 
             // dataGridView1
             // 
