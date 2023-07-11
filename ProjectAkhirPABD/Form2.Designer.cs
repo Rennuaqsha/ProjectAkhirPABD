@@ -32,15 +32,17 @@
             this.CostumerId = new System.Windows.Forms.Label();
             this.NamaCos = new System.Windows.Forms.Label();
             this.Alamat = new System.Windows.Forms.Label();
-            this.NoTelp = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.NoTelepon = new System.Windows.Forms.Label();
+            this.cosId = new System.Windows.Forms.TextBox();
+            this.nmCos = new System.Windows.Forms.TextBox();
+            this.Almt = new System.Windows.Forms.TextBox();
+            this.NoTelp = new System.Windows.Forms.TextBox();
             this.Add = new System.Windows.Forms.Button();
             this.Save = new System.Windows.Forms.Button();
             this.Clear = new System.Windows.Forms.Button();
             this.Next = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -59,7 +61,7 @@
             this.CostumerId.AutoSize = true;
             this.CostumerId.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.CostumerId.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CostumerId.Location = new System.Drawing.Point(142, 125);
+            this.CostumerId.Location = new System.Drawing.Point(334, 127);
             this.CostumerId.Name = "CostumerId";
             this.CostumerId.Size = new System.Drawing.Size(110, 25);
             this.CostumerId.TabIndex = 6;
@@ -70,7 +72,7 @@
             this.NamaCos.AutoSize = true;
             this.NamaCos.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.NamaCos.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NamaCos.Location = new System.Drawing.Point(142, 183);
+            this.NamaCos.Location = new System.Drawing.Point(334, 183);
             this.NamaCos.Name = "NamaCos";
             this.NamaCos.Size = new System.Drawing.Size(140, 25);
             this.NamaCos.TabIndex = 7;
@@ -81,78 +83,80 @@
             this.Alamat.AutoSize = true;
             this.Alamat.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Alamat.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Alamat.Location = new System.Drawing.Point(142, 243);
+            this.Alamat.Location = new System.Drawing.Point(334, 238);
             this.Alamat.Name = "Alamat";
             this.Alamat.Size = new System.Drawing.Size(68, 25);
             this.Alamat.TabIndex = 8;
             this.Alamat.Text = "Alamat";
             // 
+            // NoTelepon
+            // 
+            this.NoTelepon.AutoSize = true;
+            this.NoTelepon.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.NoTelepon.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NoTelepon.Location = new System.Drawing.Point(334, 287);
+            this.NoTelepon.Name = "NoTelepon";
+            this.NoTelepon.Size = new System.Drawing.Size(132, 25);
+            this.NoTelepon.TabIndex = 9;
+            this.NoTelepon.Text = "Nomor Telepon";
+            // 
+            // cosId
+            // 
+            this.cosId.Location = new System.Drawing.Point(527, 132);
+            this.cosId.Name = "cosId";
+            this.cosId.Size = new System.Drawing.Size(181, 22);
+            this.cosId.TabIndex = 10;
+            // 
+            // nmCos
+            // 
+            this.nmCos.Location = new System.Drawing.Point(527, 188);
+            this.nmCos.Name = "nmCos";
+            this.nmCos.Size = new System.Drawing.Size(181, 22);
+            this.nmCos.TabIndex = 11;
+            // 
+            // Almt
+            // 
+            this.Almt.Location = new System.Drawing.Point(527, 243);
+            this.Almt.Name = "Almt";
+            this.Almt.Size = new System.Drawing.Size(181, 22);
+            this.Almt.TabIndex = 12;
+            // 
             // NoTelp
             // 
-            this.NoTelp.AutoSize = true;
-            this.NoTelp.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.NoTelp.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NoTelp.Location = new System.Drawing.Point(142, 303);
+            this.NoTelp.Location = new System.Drawing.Point(527, 287);
             this.NoTelp.Name = "NoTelp";
-            this.NoTelp.Size = new System.Drawing.Size(132, 25);
-            this.NoTelp.TabIndex = 9;
-            this.NoTelp.Text = "Nomor Telepon";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(410, 130);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(181, 22);
-            this.textBox1.TabIndex = 10;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(410, 188);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(181, 22);
-            this.textBox2.TabIndex = 11;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(410, 248);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(181, 22);
-            this.textBox3.TabIndex = 12;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(410, 303);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(181, 22);
-            this.textBox4.TabIndex = 13;
+            this.NoTelp.Size = new System.Drawing.Size(181, 22);
+            this.NoTelp.TabIndex = 13;
             // 
             // Add
             // 
             this.Add.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Add.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Add.Location = new System.Drawing.Point(147, 371);
+            this.Add.Location = new System.Drawing.Point(134, 403);
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(91, 35);
             this.Add.TabIndex = 14;
             this.Add.Text = "Add";
             this.Add.UseVisualStyleBackColor = false;
+            this.Add.Click += new System.EventHandler(this.Add_Click);
             // 
             // Save
             // 
             this.Save.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Save.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Save.Location = new System.Drawing.Point(319, 371);
+            this.Save.Location = new System.Drawing.Point(323, 403);
             this.Save.Name = "Save";
             this.Save.Size = new System.Drawing.Size(91, 35);
             this.Save.TabIndex = 15;
             this.Save.Text = "Save";
             this.Save.UseVisualStyleBackColor = false;
+            this.Save.Click += new System.EventHandler(this.Save_Click);
             // 
             // Clear
             // 
             this.Clear.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Clear.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Clear.Location = new System.Drawing.Point(500, 371);
+            this.Clear.Location = new System.Drawing.Point(576, 403);
             this.Clear.Name = "Clear";
             this.Clear.Size = new System.Drawing.Size(91, 35);
             this.Clear.TabIndex = 16;
@@ -163,12 +167,23 @@
             // 
             this.Next.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Next.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Next.Location = new System.Drawing.Point(648, 210);
+            this.Next.Location = new System.Drawing.Point(714, 204);
             this.Next.Name = "Next";
-            this.Next.Size = new System.Drawing.Size(91, 35);
+            this.Next.Size = new System.Drawing.Size(74, 35);
             this.Next.TabIndex = 17;
             this.Next.Text = "Next";
             this.Next.UseVisualStyleBackColor = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 126);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(304, 227);
+            this.dataGridView1.TabIndex = 18;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Costumer
             // 
@@ -178,15 +193,16 @@
             this.BackgroundImage = global::ProjectAkhirPABD.Properties.Resources.NanangFutsal;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Next);
             this.Controls.Add(this.Clear);
             this.Controls.Add(this.Save);
             this.Controls.Add(this.Add);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.NoTelp);
+            this.Controls.Add(this.Almt);
+            this.Controls.Add(this.nmCos);
+            this.Controls.Add(this.cosId);
+            this.Controls.Add(this.NoTelepon);
             this.Controls.Add(this.Alamat);
             this.Controls.Add(this.NamaCos);
             this.Controls.Add(this.CostumerId);
@@ -195,6 +211,7 @@
             this.Name = "Costumer";
             this.Text = "Costumer";
             this.Load += new System.EventHandler(this.Jaminan_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,14 +222,15 @@
         private System.Windows.Forms.Label CostumerId;
         private System.Windows.Forms.Label NamaCos;
         private System.Windows.Forms.Label Alamat;
-        private System.Windows.Forms.Label NoTelp;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label NoTelepon;
+        private System.Windows.Forms.TextBox cosId;
+        private System.Windows.Forms.TextBox nmCos;
+        private System.Windows.Forms.TextBox Almt;
+        private System.Windows.Forms.TextBox NoTelp;
         private System.Windows.Forms.Button Add;
         private System.Windows.Forms.Button Save;
         private System.Windows.Forms.Button Clear;
         private System.Windows.Forms.Button Next;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

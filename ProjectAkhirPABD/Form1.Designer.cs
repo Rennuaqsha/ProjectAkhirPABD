@@ -250,35 +250,35 @@
             // jaminanToolStripMenuItem
             // 
             this.jaminanToolStripMenuItem.Name = "jaminanToolStripMenuItem";
-            this.jaminanToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.jaminanToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
             this.jaminanToolStripMenuItem.Text = "Jaminan";
             this.jaminanToolStripMenuItem.Click += new System.EventHandler(this.jaminanToolStripMenuItem_Click);
             // 
             // karyawanToolStripMenuItem
             // 
             this.karyawanToolStripMenuItem.Name = "karyawanToolStripMenuItem";
-            this.karyawanToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.karyawanToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
             this.karyawanToolStripMenuItem.Text = "Karyawan";
             this.karyawanToolStripMenuItem.Click += new System.EventHandler(this.karyawanToolStripMenuItem_Click);
             // 
             // statusKaryawanToolStripMenuItem
             // 
             this.statusKaryawanToolStripMenuItem.Name = "statusKaryawanToolStripMenuItem";
-            this.statusKaryawanToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.statusKaryawanToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
             this.statusKaryawanToolStripMenuItem.Text = "Status Karyawan";
             this.statusKaryawanToolStripMenuItem.Click += new System.EventHandler(this.statusKaryawanToolStripMenuItem_Click);
             // 
             // lapanganToolStripMenuItem
             // 
             this.lapanganToolStripMenuItem.Name = "lapanganToolStripMenuItem";
-            this.lapanganToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.lapanganToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
             this.lapanganToolStripMenuItem.Text = "Lapangan";
             this.lapanganToolStripMenuItem.Click += new System.EventHandler(this.lapanganToolStripMenuItem_Click);
             // 
             // pembayaranToolStripMenuItem
             // 
             this.pembayaranToolStripMenuItem.Name = "pembayaranToolStripMenuItem";
-            this.pembayaranToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.pembayaranToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
             this.pembayaranToolStripMenuItem.Text = "Pembayaran";
             this.pembayaranToolStripMenuItem.Click += new System.EventHandler(this.pembayaranToolStripMenuItem_Click);
             // 
