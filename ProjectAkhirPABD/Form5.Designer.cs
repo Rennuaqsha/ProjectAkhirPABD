@@ -47,9 +47,9 @@
             this.label4.Font = new System.Drawing.Font("Impact", 19.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(279, 20);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(209, 41);
+            this.label4.Size = new System.Drawing.Size(247, 41);
             this.label4.TabIndex = 18;
-            this.label4.Text = "Nanang Futsal";
+            this.label4.Text = "Status Karyawan";
             // 
             // StatusId
             // 
@@ -100,7 +100,11 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "1. Tetap",
+            "2. Magang"});
             this.comboBox1.Location = new System.Drawing.Point(433, 199);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(150, 24);
@@ -143,7 +147,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::ProjectAkhirPABD.Properties.Resources.NanangFutsal;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(800, 450);

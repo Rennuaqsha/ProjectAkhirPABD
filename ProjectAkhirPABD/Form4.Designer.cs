@@ -52,11 +52,11 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label4.Font = new System.Drawing.Font("Impact", 19.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(275, 20);
+            this.label4.Location = new System.Drawing.Point(309, 18);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(209, 41);
+            this.label4.Size = new System.Drawing.Size(154, 41);
             this.label4.TabIndex = 17;
-            this.label4.Text = "Nanang Futsal";
+            this.label4.Text = "Karyawan";
             // 
             // KrywnId
             // 
@@ -214,6 +214,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BackgroundImage = global::ProjectAkhirPABD.Properties.Resources.NanangFutsal;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(800, 450);

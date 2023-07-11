@@ -34,7 +34,51 @@ namespace ProjectAkhirPABD
 
         private void pendaftaranToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Costumer costumer = new Costumer();
+            costumer.Show();
+            this.Hide();
+        }
 
+        private void Next_Click(object sender, EventArgs e)
+        {
+            Costumer costumer = new Costumer();
+            costumer.Show();
+            this.Hide();
+        }
+
+        private void jaminanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Jaminan jaminan = new Jaminan();
+            jaminan.Show();
+            this.Hide();
+        }
+
+        private void karyawanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Karyawan karyawan = new Karyawan();
+            karyawan.Show();
+            this.Hide();
+        }
+
+        private void statusKaryawanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StatusKaryawan statusKaryawan = new StatusKaryawan();
+            statusKaryawan.Show();
+            this.Hide();
+        }
+
+        private void lapanganToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Lapangan lapangan = new Lapangan();
+            lapangan.Show();
+            this.Hide();
+        }
+
+        private void pembayaranToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Pembayaran pembayaran = new Pembayaran();
+            pembayaran.Show();
+            this.Hide();
         }
     }
 }

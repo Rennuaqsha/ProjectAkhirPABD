@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProjectAkhirPABD
 {
-    public partial class Form6 : Form
+    public partial class Lapangan : Form
     {
-        public Form6()
+        public Lapangan()
         {
             InitializeComponent();
         }
