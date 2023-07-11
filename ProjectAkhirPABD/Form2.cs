@@ -15,7 +15,7 @@ namespace ProjectAkhirPABD
     public partial class Costumer : Form
     {
         private string stringConnection = "DESKTOP-6I7FGSP\\NEMBOO\\SQLQuery1;" + "database=Service;User ID=sa;Password=123";
-        private SqlConnection Koneksi;
+        private SqlConnection koneksi;
         private void refreshform()
         {
             cosId.Text = "";
@@ -34,7 +34,7 @@ namespace ProjectAkhirPABD
         public Costumer()
         {
             InitializeComponent();
-            Koneksi = new SqlConnection(stringConnection);
+            koneksi = new SqlConnection(stringConnection);
             refreshform();
             dataGridView1.CellClick += DataGridView1_CellClick;
         }
@@ -90,16 +90,16 @@ namespace ProjectAkhirPABD
             }
             else
             {
-                Koneksi.Open();
+                koneksi.Open();
                 string str = "INSERT INTO Customer (customer_id, nama_customer, alamat, no_telepon) VALUES (@customer_id, @nama_customer, @alamat, @no_telepon)";
-                SqlCommand cmd = new SqlCommand(str, Koneksi);
+                SqlCommand cmd = new SqlCommand(str, koneksi);
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.Add(new SqlParameter("customer_id", CustomerId));
                 cmd.Parameters.Add(new SqlParameter("nama_customer", NamaCustomer));
                 cmd.Parameters.Add(new SqlParameter("alamat", Alamat));
                 cmd.Parameters.Add(new SqlParameter("no_telepon", NomorTelepon));
                 cmd.ExecuteNonQuery();
-                Koneksi.Close();
+                koneksi.Close();
 
                 MessageBox.Show("Data Berhasil Disimpan", "succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 dataGridView();
@@ -110,13 +110,13 @@ namespace ProjectAkhirPABD
 
         private void dataGridView()
         {
-            Koneksi.Open();
+            koneksi.Open();
             string str = "select customer_Id, nama_customer, alamat, no_telepon from dbo.customer";
-            SqlDataAdapter da = new SqlDataAdapter(str, Koneksi);
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
             DataSet ds = new DataSet();
             da.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0];
-            Koneksi.Close();
+            koneksi.Close();
         }
 
         private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
