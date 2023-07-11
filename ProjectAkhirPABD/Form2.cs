@@ -14,7 +14,7 @@ namespace ProjectAkhirPABD
 {
     public partial class Costumer : Form
     {
-        private string stringConnection = "Data Source=NanangFutsal;Initial Catalog=Customer;Persist Security Info=True;User ID=sa;Password=123";
+        private string stringConnection = "Data Source=DESKTOP-6I7FGSP\\NEMBOO;Initial Catalog=NanangFutsal;Persist Security Info=True;User ID=sa;Password=123";
         private SqlConnection koneksi;
 
         private void refreshform()
@@ -29,7 +29,8 @@ namespace ProjectAkhirPABD
             Add.Enabled = true;
             Save.Enabled = false;
             Clear.Enabled = false;
-            Next.Enabled = false;
+  
+
         }
 
         public Costumer()
@@ -64,7 +65,7 @@ namespace ProjectAkhirPABD
             Add.Enabled = true;
             Save.Enabled = true;
             Clear.Enabled = true;
-            Next.Enabled = true;
+            
 
         }
 
@@ -149,7 +150,7 @@ namespace ProjectAkhirPABD
 
         private void Next_Click(object sender, EventArgs e)
         {
-             Jaminan jaminan = new Jaminan();
+            Jaminan jaminan = new Jaminan();
             jaminan.Show();
             this.Hide();
 

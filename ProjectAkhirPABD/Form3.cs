@@ -14,7 +14,7 @@ namespace ProjectAkhirPABD
 {
     public partial class Jaminan : Form
     {
-        private string stringConnection = "Data Source=NanangFutsal;Initial Catalog=Jaminan;Persist Security Info=True;User ID=sa;Password=123";
+        private string stringConnection = "Data Source=DESKTOP-6I7FGSP\\NEMBOO;Initial Catalog=NanangFutsal;Persist Security Info=True;User ID=sa;Password=123";
         private SqlConnection koneksi;
         private void refreshform()
         {
@@ -22,40 +22,34 @@ namespace ProjectAkhirPABD
             txtjaminan.Enabled = false;
             txtjenis.Text = "";
             txtjenis.Enabled = false;
-            txtcosId.Text = "";
-            txtcosId.Enabled = false; 
-            Add.Enabled = false;
+            cbxCosId.Text = "";
+            cbxCosId.Enabled = false; 
+            Add.Enabled = true;
             Save.Enabled = false;
             Clear.Enabled = false;
-            Next.Enabled = false;
         }
 
         public Jaminan()
         {
             InitializeComponent();
             koneksi = new SqlConnection(stringConnection);
-            refreshform();
-            dataGridView1.CellClick += DataGridView1_CellClick;
+            LoadCustomers();
         }
+
 
         private void Add_Click(object sender, EventArgs e)
         {
-            txtjaminan.Text = "";
-            txtjaminan.Enabled = false;
-            txtjenis.Text = "";
-            txtjenis.Enabled = false;
-            txtcosId.Text = "";
-            txtcosId.Enabled = false;
-            Add.Enabled = false;
-            Save.Enabled = false;
-            Clear.Enabled = false;
-            Next.Enabled = false;
+            txtjaminan.Enabled = true;
+            txtjenis.Enabled = true;
+            cbxCosId.Enabled = true;
+            Save.Enabled = true;
+            Clear.Enabled = true;
         }
 
         private void dataGridView()
         {
             koneksi.Open();
-            string str = "select jaminan_id, jenis_jaminan, customer_id,  from dbo.Jaminan";
+            string str = "select jaminan_id, jenis_jaminan, customer_id from dbo.Jaminan";
             SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -70,11 +64,11 @@ namespace ProjectAkhirPABD
                 DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
                 txtjaminan.Text = row.Cells["jaminan_id"].Value.ToString();
                 txtjenis.Text = row.Cells["jenis_jaminan"].Value.ToString();
-                txtcosId.Text = row.Cells["customer_id"].Value.ToString();
+                cbxCosId.Text = row.Cells["customer_id"].Value.ToString();
 
                 txtjaminan.Enabled = false;
                 txtjenis.Enabled = false;
-                txtcosId.Enabled = false;
+                cbxCosId.Enabled = false;
                 Add.Enabled = false;
                 Save.Enabled = false;
                 Clear.Enabled = false;
@@ -88,12 +82,74 @@ namespace ProjectAkhirPABD
 
         private void Save_Click(object sender, EventArgs e)
         {
-            
+            string JaminanId = txtjaminan.Text.Trim();
+            string JenisJaminan = txtjenis.Text.Trim();
+            string CustomerId = cbxCosId.Text.Trim();
+
+            if (JaminanId == "")
+            {
+                MessageBox.Show("Masukkan Costumer id", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (JenisJaminan == "")
+            {
+                MessageBox.Show("Masukkan Nama Anda", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (CustomerId == "")
+            {
+                MessageBox.Show("Masukkan Nama Anda", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else
+            {
+                koneksi.Open();
+                string str = "INSERT INTO Jaminan (jaminan_id, jenis_jaminan, customer_id) VALUES (@jaminan_id, @jenis_jaminan, @customer_id)";
+                SqlCommand cmd = new SqlCommand(str, koneksi);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.Add(new SqlParameter("jaminan_id", JaminanId));
+                cmd.Parameters.Add(new SqlParameter("jenis_jaminan", JenisJaminan));
+                cmd.Parameters.Add(new SqlParameter("customer_id", CustomerId));
+                cmd.ExecuteNonQuery();
+                koneksi.Close();
+
+                MessageBox.Show("Data Berhasil Disimpan", "succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dataGridView();
+                refreshform();
+            }
+        }
+
+        private void LoadCustomers()
+        {
+            try
+            {
+                koneksi.Open();
+                string query = "SELECT customer_id FROM Customer";
+                SqlCommand command = new SqlCommand(query, koneksi);
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    cbxCosId.Items.Add(reader["customer_id"].ToString());
+                }
+
+                reader.Close();
+                koneksi.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
 
         private void Clear_Click(object sender, EventArgs e)
         {
             refreshform();
+        }
+
+        private void Next_Click(object sender, EventArgs e)
+        {
+            Lapangan lapangan = new Lapangan();
+            lapangan.Show();
+            this.Hide();
         }
     }
 }

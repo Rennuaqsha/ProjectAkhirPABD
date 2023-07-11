@@ -30,7 +30,6 @@
         {
             this.txtjenis = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtcosId = new System.Windows.Forms.TextBox();
             this.txtjaminan = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,12 +39,17 @@
             this.Clear = new System.Windows.Forms.Button();
             this.Next = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.cbxCosId = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtjenis
             // 
             this.txtjenis.FormattingEnabled = true;
+            this.txtjenis.Items.AddRange(new object[] {
+            "KTP",
+            "SIM",
+            "KTM"});
             this.txtjenis.Location = new System.Drawing.Point(496, 199);
             this.txtjenis.Name = "txtjenis";
             this.txtjenis.Size = new System.Drawing.Size(150, 24);
@@ -61,13 +65,6 @@
             this.label4.Size = new System.Drawing.Size(131, 41);
             this.label4.TabIndex = 16;
             this.label4.Text = "Jaminan";
-            // 
-            // txtcosId
-            // 
-            this.txtcosId.Location = new System.Drawing.Point(496, 271);
-            this.txtcosId.Name = "txtcosId";
-            this.txtcosId.Size = new System.Drawing.Size(150, 22);
-            this.txtcosId.TabIndex = 15;
             // 
             // txtjaminan
             // 
@@ -155,6 +152,7 @@
             this.Next.TabIndex = 24;
             this.Next.Text = "Next";
             this.Next.UseVisualStyleBackColor = false;
+            this.Next.Click += new System.EventHandler(this.Next_Click);
             // 
             // dataGridView1
             // 
@@ -167,6 +165,14 @@
             this.dataGridView1.TabIndex = 25;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // cbxCosId
+            // 
+            this.cbxCosId.FormattingEnabled = true;
+            this.cbxCosId.Location = new System.Drawing.Point(496, 275);
+            this.cbxCosId.Name = "cbxCosId";
+            this.cbxCosId.Size = new System.Drawing.Size(150, 24);
+            this.cbxCosId.TabIndex = 26;
+            // 
             // Jaminan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -175,6 +181,7 @@
             this.BackgroundImage = global::ProjectAkhirPABD.Properties.Resources.NanangFutsal;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cbxCosId);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Next);
             this.Controls.Add(this.Clear);
@@ -182,7 +189,6 @@
             this.Controls.Add(this.Add);
             this.Controls.Add(this.txtjenis);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtcosId);
             this.Controls.Add(this.txtjaminan);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -199,7 +205,6 @@
         #endregion
         private System.Windows.Forms.ComboBox txtjenis;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtcosId;
         private System.Windows.Forms.TextBox txtjaminan;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -209,5 +214,6 @@
         private System.Windows.Forms.Button Clear;
         private System.Windows.Forms.Button Next;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox cbxCosId;
     }
 }

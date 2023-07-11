@@ -164,6 +164,7 @@
             this.DoubleBuffered = true;
             this.Name = "StatusKaryawan";
             this.Text = "Status Karyawan";
+            this.Load += new System.EventHandler(this.StatusKaryawan_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -35,16 +35,18 @@
             this.Gaji = new System.Windows.Forms.Label();
             this.JaminanId = new System.Windows.Forms.Label();
             this.LpngnId = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtKarId = new System.Windows.Forms.TextBox();
+            this.txtnama = new System.Windows.Forms.TextBox();
+            this.txtjabatan = new System.Windows.Forms.TextBox();
+            this.txtgaji = new System.Windows.Forms.TextBox();
             this.Clear = new System.Windows.Forms.Button();
             this.Save = new System.Windows.Forms.Button();
             this.Add = new System.Windows.Forms.Button();
             this.Next = new System.Windows.Forms.Button();
+            this.cbxjaminan = new System.Windows.Forms.ComboBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.cbxLapangan = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -63,7 +65,7 @@
             this.KrywnId.AutoSize = true;
             this.KrywnId.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.KrywnId.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KrywnId.Location = new System.Drawing.Point(167, 102);
+            this.KrywnId.Location = new System.Drawing.Point(388, 99);
             this.KrywnId.Name = "KrywnId";
             this.KrywnId.Size = new System.Drawing.Size(112, 25);
             this.KrywnId.TabIndex = 18;
@@ -74,7 +76,7 @@
             this.nmKrywn.AutoSize = true;
             this.nmKrywn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.nmKrywn.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nmKrywn.Location = new System.Drawing.Point(167, 147);
+            this.nmKrywn.Location = new System.Drawing.Point(388, 149);
             this.nmKrywn.Name = "nmKrywn";
             this.nmKrywn.Size = new System.Drawing.Size(142, 25);
             this.nmKrywn.TabIndex = 19;
@@ -85,7 +87,7 @@
             this.Jabatan.AutoSize = true;
             this.Jabatan.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Jabatan.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Jabatan.Location = new System.Drawing.Point(167, 194);
+            this.Jabatan.Location = new System.Drawing.Point(388, 194);
             this.Jabatan.Name = "Jabatan";
             this.Jabatan.Size = new System.Drawing.Size(75, 25);
             this.Jabatan.TabIndex = 20;
@@ -96,7 +98,7 @@
             this.Gaji.AutoSize = true;
             this.Gaji.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Gaji.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Gaji.Location = new System.Drawing.Point(167, 237);
+            this.Gaji.Location = new System.Drawing.Point(392, 242);
             this.Gaji.Name = "Gaji";
             this.Gaji.Size = new System.Drawing.Size(43, 25);
             this.Gaji.TabIndex = 21;
@@ -107,7 +109,7 @@
             this.JaminanId.AutoSize = true;
             this.JaminanId.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.JaminanId.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.JaminanId.Location = new System.Drawing.Point(167, 282);
+            this.JaminanId.Location = new System.Drawing.Point(392, 283);
             this.JaminanId.Name = "JaminanId";
             this.JaminanId.Size = new System.Drawing.Size(98, 25);
             this.JaminanId.TabIndex = 22;
@@ -118,97 +120,114 @@
             this.LpngnId.AutoSize = true;
             this.LpngnId.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.LpngnId.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LpngnId.Location = new System.Drawing.Point(167, 332);
+            this.LpngnId.Location = new System.Drawing.Point(392, 327);
             this.LpngnId.Name = "LpngnId";
             this.LpngnId.Size = new System.Drawing.Size(110, 25);
             this.LpngnId.TabIndex = 23;
             this.LpngnId.Text = "Lapangan Id";
             // 
-            // textBox1
+            // txtKarId
             // 
-            this.textBox1.Location = new System.Drawing.Point(444, 107);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(197, 22);
-            this.textBox1.TabIndex = 24;
+            this.txtKarId.Location = new System.Drawing.Point(536, 102);
+            this.txtKarId.Name = "txtKarId";
+            this.txtKarId.Size = new System.Drawing.Size(157, 22);
+            this.txtKarId.TabIndex = 24;
             // 
-            // textBox2
+            // txtnama
             // 
-            this.textBox2.Location = new System.Drawing.Point(444, 152);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(197, 22);
-            this.textBox2.TabIndex = 25;
+            this.txtnama.Location = new System.Drawing.Point(536, 152);
+            this.txtnama.Name = "txtnama";
+            this.txtnama.Size = new System.Drawing.Size(157, 22);
+            this.txtnama.TabIndex = 25;
             // 
-            // textBox3
+            // txtjabatan
             // 
-            this.textBox3.Location = new System.Drawing.Point(444, 199);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(197, 22);
-            this.textBox3.TabIndex = 26;
+            this.txtjabatan.Location = new System.Drawing.Point(536, 199);
+            this.txtjabatan.Name = "txtjabatan";
+            this.txtjabatan.Size = new System.Drawing.Size(157, 22);
+            this.txtjabatan.TabIndex = 26;
             // 
-            // textBox4
+            // txtgaji
             // 
-            this.textBox4.Location = new System.Drawing.Point(444, 242);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(197, 22);
-            this.textBox4.TabIndex = 27;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(444, 287);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(197, 22);
-            this.textBox5.TabIndex = 28;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(444, 332);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(197, 22);
-            this.textBox6.TabIndex = 29;
+            this.txtgaji.Location = new System.Drawing.Point(534, 242);
+            this.txtgaji.Name = "txtgaji";
+            this.txtgaji.Size = new System.Drawing.Size(157, 22);
+            this.txtgaji.TabIndex = 27;
             // 
             // Clear
             // 
             this.Clear.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Clear.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Clear.Location = new System.Drawing.Point(484, 383);
+            this.Clear.Location = new System.Drawing.Point(550, 403);
             this.Clear.Name = "Clear";
             this.Clear.Size = new System.Drawing.Size(91, 35);
             this.Clear.TabIndex = 32;
             this.Clear.Text = "Clear";
             this.Clear.UseVisualStyleBackColor = false;
+            this.Clear.Click += new System.EventHandler(this.Clear_Click);
             // 
             // Save
             // 
             this.Save.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Save.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Save.Location = new System.Drawing.Point(331, 383);
+            this.Save.Location = new System.Drawing.Point(359, 403);
             this.Save.Name = "Save";
             this.Save.Size = new System.Drawing.Size(91, 35);
             this.Save.TabIndex = 31;
             this.Save.Text = "Save";
             this.Save.UseVisualStyleBackColor = false;
+            this.Save.Click += new System.EventHandler(this.Save_Click);
             // 
             // Add
             // 
             this.Add.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Add.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Add.Location = new System.Drawing.Point(188, 383);
+            this.Add.Location = new System.Drawing.Point(188, 403);
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(91, 35);
             this.Add.TabIndex = 30;
             this.Add.Text = "Add";
             this.Add.UseVisualStyleBackColor = false;
+            this.Add.Click += new System.EventHandler(this.Add_Click);
             // 
             // Next
             // 
             this.Next.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Next.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Next.Location = new System.Drawing.Point(674, 213);
+            this.Next.Location = new System.Drawing.Point(697, 216);
             this.Next.Name = "Next";
             this.Next.Size = new System.Drawing.Size(91, 35);
             this.Next.TabIndex = 33;
             this.Next.Text = "Next";
             this.Next.UseVisualStyleBackColor = false;
+            this.Next.Click += new System.EventHandler(this.Next_Click);
+            // 
+            // cbxjaminan
+            // 
+            this.cbxjaminan.FormattingEnabled = true;
+            this.cbxjaminan.Location = new System.Drawing.Point(536, 283);
+            this.cbxjaminan.Name = "cbxjaminan";
+            this.cbxjaminan.Size = new System.Drawing.Size(157, 24);
+            this.cbxjaminan.TabIndex = 34;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(1, 107);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(329, 246);
+            this.dataGridView1.TabIndex = 35;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // cbxLapangan
+            // 
+            this.cbxLapangan.FormattingEnabled = true;
+            this.cbxLapangan.Location = new System.Drawing.Point(536, 332);
+            this.cbxLapangan.Name = "cbxLapangan";
+            this.cbxLapangan.Size = new System.Drawing.Size(157, 24);
+            this.cbxLapangan.TabIndex = 36;
             // 
             // Karyawan
             // 
@@ -218,16 +237,17 @@
             this.BackgroundImage = global::ProjectAkhirPABD.Properties.Resources.NanangFutsal;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cbxLapangan);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.cbxjaminan);
             this.Controls.Add(this.Next);
             this.Controls.Add(this.Clear);
             this.Controls.Add(this.Save);
             this.Controls.Add(this.Add);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtgaji);
+            this.Controls.Add(this.txtjabatan);
+            this.Controls.Add(this.txtnama);
+            this.Controls.Add(this.txtKarId);
             this.Controls.Add(this.LpngnId);
             this.Controls.Add(this.JaminanId);
             this.Controls.Add(this.Gaji);
@@ -238,6 +258,8 @@
             this.DoubleBuffered = true;
             this.Name = "Karyawan";
             this.Text = "Karyawan";
+            this.Load += new System.EventHandler(this.Karyawan_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -252,15 +274,16 @@
         private System.Windows.Forms.Label Gaji;
         private System.Windows.Forms.Label JaminanId;
         private System.Windows.Forms.Label LpngnId;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtKarId;
+        private System.Windows.Forms.TextBox txtnama;
+        private System.Windows.Forms.TextBox txtjabatan;
+        private System.Windows.Forms.TextBox txtgaji;
         private System.Windows.Forms.Button Clear;
         private System.Windows.Forms.Button Save;
         private System.Windows.Forms.Button Add;
         private System.Windows.Forms.Button Next;
+        private System.Windows.Forms.ComboBox cbxjaminan;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox cbxLapangan;
     }
 }

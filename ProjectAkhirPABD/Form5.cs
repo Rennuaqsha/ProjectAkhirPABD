@@ -16,5 +16,10 @@ namespace ProjectAkhirPABD
         {
             InitializeComponent();
         }
+
+        private void StatusKaryawan_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
