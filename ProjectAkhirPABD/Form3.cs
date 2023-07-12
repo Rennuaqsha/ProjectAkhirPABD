@@ -88,15 +88,15 @@ namespace ProjectAkhirPABD
 
             if (JaminanId == "")
             {
-                MessageBox.Show("Masukkan Costumer id", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Masukkan Jaminan Id", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (JenisJaminan == "")
             {
-                MessageBox.Show("Masukkan Nama Anda", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Masukkan Jenis Jaminan", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (CustomerId == "")
             {
-                MessageBox.Show("Masukkan Nama Anda", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Masukkan customer Id", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             else
@@ -150,6 +150,11 @@ namespace ProjectAkhirPABD
             Lapangan lapangan = new Lapangan();
             lapangan.Show();
             this.Hide();
+        }
+
+        private void Jaminan_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

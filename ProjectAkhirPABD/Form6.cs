@@ -81,33 +81,69 @@ namespace ProjectAkhirPABD
 
             else
             {
-                koneksi.Open();
-                string str = "INSERT INTO Lapangan (lapangan_id, jenis_lapangan, no_lapangan, harga_sewa_perjam) VALUES (@lapangan_id, @jenis_lapangan, @no_lapangan, @harga_sewa_perjam)";
-                SqlCommand cmd = new SqlCommand(str, koneksi);
-                cmd.CommandType = CommandType.Text;
-                cmd.Parameters.Add(new SqlParameter("lapangan_id", LapanganId));
-                cmd.Parameters.Add(new SqlParameter("jenis_lapangan", JenisLapangan));
-                cmd.Parameters.Add(new SqlParameter("no_lapangan", NomorLapangan));
-                cmd.Parameters.Add(new SqlParameter("harga_sewa_perjam", Harga));
-                cmd.ExecuteNonQuery();
-                koneksi.Close();
+                try
+                {
+                    using (SqlConnection koneksi = new SqlConnection(stringConnection))
+                    {
+                        koneksi.Open();
+                        // Cek apakah data dengan lapangan_id yang sama sudah ada di database
+                        string cekQuery = "SELECT COUNT(*) FROM Lapangan WHERE lapangan_id = @lapangan_id";
+                        using (SqlCommand cekCmd = new SqlCommand(cekQuery, koneksi))
+                        {
+                            cekCmd.Parameters.AddWithValue("@lapangan_id", LapanganId);
+                            int existingCount = (int)cekCmd.ExecuteScalar();
 
-                MessageBox.Show("Data Berhasil Disimpan", "succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                dataGridView();
-                refreshform();
+                            if (existingCount > 0)
+                            {
+                                MessageBox.Show("Lapangan ID sudah ada dalam database.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                return;
+                            }
+                        }
+
+                        string str = "INSERT INTO Lapangan (lapangan_id, jenis_lapangan, no_lapangan, harga_sewa_perjam) VALUES (@lapangan_id, @jenis_lapangan, @no_lapangan, @harga_sewa_perjam)";
+                        using (SqlCommand cmd = new SqlCommand(str, koneksi))
+                        {
+                            cmd.Parameters.Add("@lapangan_id", SqlDbType.Char, 10).Value = LapanganId;
+                            cmd.Parameters.Add("@jenis_lapangan", SqlDbType.VarChar, 10).Value = JenisLapangan;
+                            cmd.Parameters.Add("@no_lapangan", SqlDbType.Char, 2).Value = NomorLapangan;
+                            cmd.Parameters.Add("@harga_sewa_perjam", SqlDbType.Money).Value = decimal.Parse(Harga);
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+
+                    MessageBox.Show("Data Berhasil Disimpan", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dataGridView();
+                    refreshform();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
             }
+
 
         }
 
         private void dataGridView()
         {
-            koneksi.Open();
-            string str = "select lapangan_id, jenis_lapangan, no_lapangan, harga_sewa_perjam from dbo.Lapangan";
-            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
-            DataSet ds = new DataSet();
-            da.Fill(ds);
-            dataGridView1.DataSource = ds.Tables[0];
-            koneksi.Close();
+            try
+            {
+                using (SqlConnection koneksi = new SqlConnection(stringConnection))
+                {
+                    koneksi.Open();
+                    string str = "SELECT lapangan_id, jenis_lapangan, no_lapangan, harga_sewa_perjam FROM Lapangan";
+                    using (SqlDataAdapter da = new SqlDataAdapter(str, koneksi))
+                    {
+                        DataSet ds = new DataSet();
+                        da.Fill(ds);
+                        dataGridView1.DataSource = ds.Tables[0];
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
 
         private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -129,6 +165,7 @@ namespace ProjectAkhirPABD
                 Clear.Enabled = false;
             }
         }
+
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

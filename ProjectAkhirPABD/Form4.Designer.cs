@@ -45,7 +45,7 @@
             this.Next = new System.Windows.Forms.Button();
             this.cbxjaminan = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.cbxLapangan = new System.Windows.Forms.ComboBox();
+            this.cbxlapangan = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -221,13 +221,13 @@
             this.dataGridView1.TabIndex = 35;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // cbxLapangan
+            // cbxlapangan
             // 
-            this.cbxLapangan.FormattingEnabled = true;
-            this.cbxLapangan.Location = new System.Drawing.Point(536, 332);
-            this.cbxLapangan.Name = "cbxLapangan";
-            this.cbxLapangan.Size = new System.Drawing.Size(157, 24);
-            this.cbxLapangan.TabIndex = 36;
+            this.cbxlapangan.FormattingEnabled = true;
+            this.cbxlapangan.Location = new System.Drawing.Point(533, 332);
+            this.cbxlapangan.Name = "cbxlapangan";
+            this.cbxlapangan.Size = new System.Drawing.Size(164, 24);
+            this.cbxlapangan.TabIndex = 36;
             // 
             // Karyawan
             // 
@@ -237,7 +237,7 @@
             this.BackgroundImage = global::ProjectAkhirPABD.Properties.Resources.NanangFutsal;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.cbxLapangan);
+            this.Controls.Add(this.cbxlapangan);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.cbxjaminan);
             this.Controls.Add(this.Next);
@@ -284,6 +284,6 @@
         private System.Windows.Forms.Button Next;
         private System.Windows.Forms.ComboBox cbxjaminan;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox cbxLapangan;
+        private System.Windows.Forms.ComboBox cbxlapangan;
     }
 }

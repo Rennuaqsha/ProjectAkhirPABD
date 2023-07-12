@@ -183,6 +183,10 @@
             // cbxjenis
             // 
             this.cbxjenis.FormattingEnabled = true;
+            this.cbxjenis.Items.AddRange(new object[] {
+            "Matras",
+            "Rumput Sintetis",
+            "Vinly"});
             this.cbxjenis.Location = new System.Drawing.Point(508, 205);
             this.cbxjenis.Name = "cbxjenis";
             this.cbxjenis.Size = new System.Drawing.Size(98, 24);

@@ -196,6 +196,7 @@
             this.DoubleBuffered = true;
             this.Name = "Jaminan";
             this.Text = "Jaminan";
+            this.Load += new System.EventHandler(this.Jaminan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

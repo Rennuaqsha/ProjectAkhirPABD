@@ -46,28 +46,6 @@ namespace ProjectAkhirPABD
             }
         }
 
-        private void LoadLapangan()
-        {
-            try
-            {
-                koneksi.Open();
-                string query = "SELECT lapangan_id FROM Lapangan";
-                SqlCommand command = new SqlCommand(query, koneksi);
-                SqlDataReader reader = command.ExecuteReader();
-
-                while (reader.Read())
-                {
-                    cbxLapangan.Items.Add(reader["lapangan_id"].ToString());
-                }
-
-                reader.Close();
-                koneksi.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-        }
 
         private void refreshform()
         {
@@ -81,8 +59,8 @@ namespace ProjectAkhirPABD
             txtgaji.Enabled = false;
             cbxjaminan.Text = "";
             cbxjaminan.Enabled = false;
-            cbxLapangan.Text = "";
-            cbxLapangan.Enabled = false;
+            cbxlapangan.Text = "";
+            cbxlapangan.Enabled = false;
             Add.Enabled = true;
             Save.Enabled = false;
             Clear.Enabled = false;
@@ -101,7 +79,7 @@ namespace ProjectAkhirPABD
             txtjabatan.Enabled = true;         
             txtgaji.Enabled = true;          
             cbxjaminan.Enabled = true;            
-            cbxLapangan.Enabled = true;
+            cbxlapangan.Enabled = true;
             Add.Enabled = true;
             Save.Enabled = true;
             Clear.Enabled = true;
@@ -114,11 +92,11 @@ namespace ProjectAkhirPABD
             string Jabatan = txtjabatan.Text.Trim();
             string Gaji = txtgaji.Text.Trim();
             string Jaminan = cbxjaminan.Text.Trim();
-            string LapanganId = cbxLapangan.Text.Trim();
+            string LapanganId = cbxlapangan.Text.Trim();
 
             if (KaryawanId == "")
             {
-                MessageBox.Show("Masukkan Costumer id", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Masukkan Karyawan id", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (NamaKaryawan == "")
             {
@@ -126,19 +104,19 @@ namespace ProjectAkhirPABD
             }
             else if (Jabatan == "")
             {
-                MessageBox.Show("Masukkan Nama Anda", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Masukkan jabatan", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (Gaji == "")
             {
-                MessageBox.Show("Masukkan Nama Anda", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Masukkan Gaji Anda", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (Jaminan == "")
             {
-                MessageBox.Show("Masukkan Nama Anda", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Masukkan Jaminan Anda", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (LapanganId == "")
             {
-                MessageBox.Show("Masukkan Nama Anda", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Masukkan Lapangan Id Anda", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             else
@@ -183,14 +161,14 @@ namespace ProjectAkhirPABD
                 txtjabatan.Text = row.Cells["jabatan"].Value.ToString();
                 txtgaji.Text = row.Cells["gaji"].Value.ToString();
                 cbxjaminan.Text = row.Cells["jaminan_id"].Value.ToString();
-                cbxLapangan.Text = row.Cells["lapangan_id"].Value.ToString();
+                cbxlapangan.Text = row.Cells["lapangan_id"].Value.ToString();
 
                 txtKarId.Enabled = false;
                 txtnama.Enabled = false;
                 txtjabatan.Enabled = false;
                 txtgaji.Enabled = false;
                 cbxjaminan.Enabled = false;
-                cbxLapangan.Enabled = false;
+                cbxlapangan.Enabled = false;
                 Add.Enabled = false;
                 Save.Enabled = false;
                 Clear.Enabled = false;
