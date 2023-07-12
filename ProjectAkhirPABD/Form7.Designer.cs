@@ -39,14 +39,16 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.KrywnId = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.Clear = new System.Windows.Forms.Button();
             this.Save = new System.Windows.Forms.Button();
             this.Add = new System.Windows.Forms.Button();
             this.Home = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -65,7 +67,7 @@
             this.Idbayar.AutoSize = true;
             this.Idbayar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Idbayar.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Idbayar.Location = new System.Drawing.Point(167, 89);
+            this.Idbayar.Location = new System.Drawing.Point(312, 94);
             this.Idbayar.Name = "Idbayar";
             this.Idbayar.Size = new System.Drawing.Size(133, 25);
             this.Idbayar.TabIndex = 21;
@@ -76,7 +78,7 @@
             this.jnsPembayaran.AutoSize = true;
             this.jnsPembayaran.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.jnsPembayaran.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jnsPembayaran.Location = new System.Drawing.Point(167, 130);
+            this.jnsPembayaran.Location = new System.Drawing.Point(312, 135);
             this.jnsPembayaran.Name = "jnsPembayaran";
             this.jnsPembayaran.Size = new System.Drawing.Size(158, 25);
             this.jnsPembayaran.TabIndex = 22;
@@ -87,7 +89,7 @@
             this.TglTransaksi.AutoSize = true;
             this.TglTransaksi.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.TglTransaksi.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TglTransaksi.Location = new System.Drawing.Point(167, 171);
+            this.TglTransaksi.Location = new System.Drawing.Point(312, 171);
             this.TglTransaksi.Name = "TglTransaksi";
             this.TglTransaksi.Size = new System.Drawing.Size(158, 25);
             this.TglTransaksi.TabIndex = 23;
@@ -98,7 +100,7 @@
             this.JmlahPem.AutoSize = true;
             this.JmlahPem.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.JmlahPem.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.JmlahPem.Location = new System.Drawing.Point(167, 212);
+            this.JmlahPem.Location = new System.Drawing.Point(312, 210);
             this.JmlahPem.Name = "JmlahPem";
             this.JmlahPem.Size = new System.Drawing.Size(174, 25);
             this.JmlahPem.TabIndex = 24;
@@ -109,7 +111,7 @@
             this.lmSewa.AutoSize = true;
             this.lmSewa.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lmSewa.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lmSewa.Location = new System.Drawing.Point(167, 256);
+            this.lmSewa.Location = new System.Drawing.Point(312, 251);
             this.lmSewa.Name = "lmSewa";
             this.lmSewa.Size = new System.Drawing.Size(102, 25);
             this.lmSewa.TabIndex = 25;
@@ -120,7 +122,7 @@
             this.CosId.AutoSize = true;
             this.CosId.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.CosId.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CosId.Location = new System.Drawing.Point(167, 303);
+            this.CosId.Location = new System.Drawing.Point(312, 298);
             this.CosId.Name = "CosId";
             this.CosId.Size = new System.Drawing.Size(113, 25);
             this.CosId.TabIndex = 26;
@@ -128,45 +130,38 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(413, 174);
+            this.dateTimePicker1.Location = new System.Drawing.Point(491, 174);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker1.TabIndex = 27;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(463, 94);
+            this.textBox1.Location = new System.Drawing.Point(538, 94);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(150, 22);
             this.textBox1.TabIndex = 28;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(463, 217);
+            this.textBox2.Location = new System.Drawing.Point(538, 215);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(150, 22);
             this.textBox2.TabIndex = 29;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(463, 261);
+            this.textBox3.Location = new System.Drawing.Point(538, 256);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(150, 22);
             this.textBox3.TabIndex = 30;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(463, 308);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(150, 22);
-            this.textBox4.TabIndex = 31;
             // 
             // KrywnId
             // 
             this.KrywnId.AutoSize = true;
             this.KrywnId.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.KrywnId.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KrywnId.Location = new System.Drawing.Point(167, 345);
+            this.KrywnId.Location = new System.Drawing.Point(313, 341);
             this.KrywnId.Name = "KrywnId";
             this.KrywnId.Size = new System.Drawing.Size(112, 25);
             this.KrywnId.TabIndex = 32;
@@ -175,17 +170,14 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(463, 135);
+            this.comboBox1.Items.AddRange(new object[] {
+            "Cash",
+            "eMob",
+            "Transfer"});
+            this.comboBox1.Location = new System.Drawing.Point(538, 135);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(150, 24);
             this.comboBox1.TabIndex = 33;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(463, 350);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(150, 22);
-            this.textBox5.TabIndex = 34;
             // 
             // Clear
             // 
@@ -197,6 +189,7 @@
             this.Clear.TabIndex = 37;
             this.Clear.Text = "Clear";
             this.Clear.UseVisualStyleBackColor = false;
+            this.Clear.Click += new System.EventHandler(this.Clear_Click);
             // 
             // Save
             // 
@@ -208,6 +201,7 @@
             this.Save.TabIndex = 36;
             this.Save.Text = "Save";
             this.Save.UseVisualStyleBackColor = false;
+            this.Save.Click += new System.EventHandler(this.Save_Click);
             // 
             // Add
             // 
@@ -219,17 +213,46 @@
             this.Add.TabIndex = 35;
             this.Add.Text = "Add";
             this.Add.UseVisualStyleBackColor = false;
+            this.Add.Click += new System.EventHandler(this.Add_Click);
             // 
             // Home
             // 
             this.Home.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Home.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Home.Location = new System.Drawing.Point(656, 189);
+            this.Home.Location = new System.Drawing.Point(697, 189);
             this.Home.Name = "Home";
             this.Home.Size = new System.Drawing.Size(91, 35);
             this.Home.TabIndex = 38;
             this.Home.Text = "Home";
             this.Home.UseVisualStyleBackColor = false;
+            this.Home.Click += new System.EventHandler(this.Home_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(5, 59);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(302, 306);
+            this.dataGridView1.TabIndex = 41;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(538, 303);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(152, 24);
+            this.comboBox2.TabIndex = 42;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(538, 346);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(150, 24);
+            this.comboBox3.TabIndex = 43;
             // 
             // Pembayaran
             // 
@@ -239,14 +262,15 @@
             this.BackgroundImage = global::ProjectAkhirPABD.Properties.Resources.NanangFutsal;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Home);
             this.Controls.Add(this.Clear);
             this.Controls.Add(this.Save);
             this.Controls.Add(this.Add);
-            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.KrywnId);
-            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -261,6 +285,8 @@
             this.DoubleBuffered = true;
             this.Name = "Pembayaran";
             this.Text = "Pembayaran";
+            this.Load += new System.EventHandler(this.Pembayaran_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -279,13 +305,14 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label KrywnId;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Button Clear;
         private System.Windows.Forms.Button Save;
         private System.Windows.Forms.Button Add;
         private System.Windows.Forms.Button Home;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox3;
     }
 }

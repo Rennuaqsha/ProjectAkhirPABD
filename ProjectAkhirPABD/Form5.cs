@@ -22,6 +22,7 @@ namespace ProjectAkhirPABD
             InitializeComponent();
             koneksi = new SqlConnection(stringConnection);
             LoadKaryawan();
+            dataGridView();
 
         }
 
@@ -40,14 +41,14 @@ namespace ProjectAkhirPABD
 
         private void LoadKaryawan()
         {
-
+           
             try
             {
                 koneksi.Open();
                 string query = "SELECT karyawan_id FROM Karyawan";
                 SqlCommand command = new SqlCommand(query, koneksi);
                 SqlDataReader reader = command.ExecuteReader();
-
+               
                 while (reader.Read())
                 {
                     cbxKarId.Items.Add(reader["karyawan_id"].ToString());
@@ -121,7 +122,9 @@ namespace ProjectAkhirPABD
             DataSet ds = new DataSet();
             da.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0];
+
             koneksi.Close();
+            
         }
 
         private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
