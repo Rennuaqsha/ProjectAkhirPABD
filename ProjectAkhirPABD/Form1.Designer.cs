@@ -90,9 +90,10 @@
             // Next
             // 
             this.Next.BackColor = System.Drawing.Color.White;
-            this.Next.Location = new System.Drawing.Point(345, 332);
+            this.Next.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Next.Location = new System.Drawing.Point(342, 329);
             this.Next.Name = "Next";
-            this.Next.Size = new System.Drawing.Size(97, 46);
+            this.Next.Size = new System.Drawing.Size(103, 34);
             this.Next.TabIndex = 7;
             this.Next.Text = "NEXT";
             this.Next.UseVisualStyleBackColor = false;
@@ -215,12 +216,14 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.BackColor = System.Drawing.SystemColors.Desktop;
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Left;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripDropDownButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 27);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(800, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(65, 423);
             this.toolStrip1.TabIndex = 9;
             this.toolStrip1.Text = "toolStrip1";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked_1);
@@ -235,50 +238,51 @@
             this.statusKaryawanToolStripMenuItem,
             this.lapanganToolStripMenuItem,
             this.pembayaranToolStripMenuItem});
+            this.toolStripDropDownButton1.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(60, 24);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(62, 26);
             this.toolStripDropDownButton1.Text = "Menu";
             // 
             // pendaftaranToolStripMenuItem
             // 
             this.pendaftaranToolStripMenuItem.Name = "pendaftaranToolStripMenuItem";
-            this.pendaftaranToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
+            this.pendaftaranToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.pendaftaranToolStripMenuItem.Text = "Pendaftaran";
             this.pendaftaranToolStripMenuItem.Click += new System.EventHandler(this.pendaftaranToolStripMenuItem_Click);
             // 
             // jaminanToolStripMenuItem
             // 
             this.jaminanToolStripMenuItem.Name = "jaminanToolStripMenuItem";
-            this.jaminanToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
+            this.jaminanToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.jaminanToolStripMenuItem.Text = "Jaminan";
             this.jaminanToolStripMenuItem.Click += new System.EventHandler(this.jaminanToolStripMenuItem_Click);
             // 
             // karyawanToolStripMenuItem
             // 
             this.karyawanToolStripMenuItem.Name = "karyawanToolStripMenuItem";
-            this.karyawanToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
+            this.karyawanToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.karyawanToolStripMenuItem.Text = "Karyawan";
             this.karyawanToolStripMenuItem.Click += new System.EventHandler(this.karyawanToolStripMenuItem_Click);
             // 
             // statusKaryawanToolStripMenuItem
             // 
             this.statusKaryawanToolStripMenuItem.Name = "statusKaryawanToolStripMenuItem";
-            this.statusKaryawanToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
+            this.statusKaryawanToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.statusKaryawanToolStripMenuItem.Text = "Status Karyawan";
             this.statusKaryawanToolStripMenuItem.Click += new System.EventHandler(this.statusKaryawanToolStripMenuItem_Click);
             // 
             // lapanganToolStripMenuItem
             // 
             this.lapanganToolStripMenuItem.Name = "lapanganToolStripMenuItem";
-            this.lapanganToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
+            this.lapanganToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.lapanganToolStripMenuItem.Text = "Lapangan";
             this.lapanganToolStripMenuItem.Click += new System.EventHandler(this.lapanganToolStripMenuItem_Click);
             // 
             // pembayaranToolStripMenuItem
             // 
             this.pembayaranToolStripMenuItem.Name = "pembayaranToolStripMenuItem";
-            this.pembayaranToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
+            this.pembayaranToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.pembayaranToolStripMenuItem.Text = "Pembayaran";
             this.pembayaranToolStripMenuItem.Click += new System.EventHandler(this.pembayaranToolStripMenuItem_Click);
             // 

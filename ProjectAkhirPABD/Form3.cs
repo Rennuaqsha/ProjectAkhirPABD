@@ -34,6 +34,7 @@ namespace ProjectAkhirPABD
             InitializeComponent();
             koneksi = new SqlConnection(stringConnection);
             LoadCustomers();
+            dataGridView();
         }
 
 
@@ -42,6 +43,7 @@ namespace ProjectAkhirPABD
             txtjaminan.Enabled = true;
             txtjenis.Enabled = true;
             cbxCosId.Enabled = true;
+            Add.Enabled = true;
             Save.Enabled = true;
             Clear.Enabled = true;
         }
@@ -155,6 +157,53 @@ namespace ProjectAkhirPABD
         private void Jaminan_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Costumer costumer = new Costumer();
+            costumer.Show();
+            this.Hide();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                DialogResult result = MessageBox.Show("Anda yakin ingin menghapus data ini?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    string JaminanId = dataGridView1.SelectedRows[0].Cells["jaminan_id"].Value.ToString();
+
+                    try
+                    {
+                        using (SqlConnection koneksi = new SqlConnection(stringConnection))
+                        {
+                            koneksi.Open();
+
+                            // Hapus baris dari tabel "Jaminan"
+                            string deleteQuery = "DELETE FROM Jaminan WHERE jaminan_id = @jaminan_id";
+                            using (SqlCommand deleteCmd = new SqlCommand(deleteQuery, koneksi))
+                            {
+                                deleteCmd.Parameters.AddWithValue("@jaminan_id", JaminanId);
+                                deleteCmd.ExecuteNonQuery();
+                            }
+
+                            MessageBox.Show("Data berhasil dihapus", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            dataGridView();
+                            refreshform();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Terjadi kesalahan saat menghapus data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Pilih data yang akan dihapus", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

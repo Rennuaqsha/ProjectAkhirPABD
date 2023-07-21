@@ -42,6 +42,8 @@
             this.Clear = new System.Windows.Forms.Button();
             this.Next = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,7 +52,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label4.Font = new System.Drawing.Font("Impact", 19.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(250, 21);
+            this.label4.Location = new System.Drawing.Point(290, 19);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(240, 41);
             this.label4.TabIndex = 5;
@@ -131,10 +133,10 @@
             // Add
             // 
             this.Add.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Add.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Add.Location = new System.Drawing.Point(134, 403);
+            this.Add.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Add.Location = new System.Drawing.Point(714, 132);
             this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(91, 35);
+            this.Add.Size = new System.Drawing.Size(79, 35);
             this.Add.TabIndex = 14;
             this.Add.Text = "Add";
             this.Add.UseVisualStyleBackColor = false;
@@ -143,10 +145,10 @@
             // Save
             // 
             this.Save.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Save.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Save.Location = new System.Drawing.Point(323, 403);
+            this.Save.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Save.Location = new System.Drawing.Point(716, 210);
             this.Save.Name = "Save";
-            this.Save.Size = new System.Drawing.Size(91, 35);
+            this.Save.Size = new System.Drawing.Size(77, 35);
             this.Save.TabIndex = 15;
             this.Save.Text = "Save";
             this.Save.UseVisualStyleBackColor = false;
@@ -155,10 +157,10 @@
             // Clear
             // 
             this.Clear.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Clear.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Clear.Location = new System.Drawing.Point(576, 403);
+            this.Clear.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Clear.Location = new System.Drawing.Point(715, 279);
             this.Clear.Name = "Clear";
-            this.Clear.Size = new System.Drawing.Size(91, 35);
+            this.Clear.Size = new System.Drawing.Size(78, 35);
             this.Clear.TabIndex = 16;
             this.Clear.Text = "Clear";
             this.Clear.UseVisualStyleBackColor = false;
@@ -167,10 +169,10 @@
             // Next
             // 
             this.Next.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Next.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Next.Location = new System.Drawing.Point(714, 204);
+            this.Next.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Next.Location = new System.Drawing.Point(474, 403);
             this.Next.Name = "Next";
-            this.Next.Size = new System.Drawing.Size(74, 35);
+            this.Next.Size = new System.Drawing.Size(69, 35);
             this.Next.TabIndex = 17;
             this.Next.Text = "Next";
             this.Next.UseVisualStyleBackColor = false;
@@ -187,6 +189,30 @@
             this.dataGridView1.TabIndex = 18;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnDelete.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Location = new System.Drawing.Point(370, 403);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(74, 35);
+            this.btnDelete.TabIndex = 19;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnBack.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(257, 403);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(78, 35);
+            this.btnBack.TabIndex = 20;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // Costumer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -195,6 +221,8 @@
             this.BackgroundImage = global::ProjectAkhirPABD.Properties.Resources.NanangFutsal;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Next);
             this.Controls.Add(this.Clear);
@@ -234,5 +262,7 @@
         private System.Windows.Forms.Button Clear;
         private System.Windows.Forms.Button Next;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnBack;
     }
 }

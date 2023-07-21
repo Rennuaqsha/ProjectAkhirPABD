@@ -9,6 +9,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.Design;
 
 namespace ProjectAkhirPABD
 {
@@ -37,8 +38,7 @@ namespace ProjectAkhirPABD
         {
             InitializeComponent();
             koneksi = new SqlConnection(stringConnection);
-            refreshform();
-            dataGridView1.CellClick += DataGridView1_CellClick;
+            dataGridView();
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -85,11 +85,11 @@ namespace ProjectAkhirPABD
             }
             else if (Alamat == "")
             {
-                MessageBox.Show("Masukkan Nama Anda", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Masukkan Alamat Anda", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (NomorTelepon == "")
             {
-                MessageBox.Show("Masukkan Nama Anda", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Masukkan Nomor Telepon Anda", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -130,9 +130,12 @@ namespace ProjectAkhirPABD
                 cosId.Text = row.Cells["customer_id"].Value.ToString();
                 nmCos.Text = row.Cells["nama_customer"].Value.ToString();
                 Alamat.Text = row.Cells["alamat"].Value.ToString();
-                Alamat.Text = row.Cells["no_telepon"].Value.ToString();
+                NoTelp.Text = row.Cells["no_telepon"].Value.ToString();
 
+                cosId.Enabled = false;
                 nmCos.Enabled = false;
+                Alamat.Enabled = false;
+                NoTelp.Enabled = false;
                 Save.Enabled = false;
                 Clear.Enabled = false;
             }
@@ -154,6 +157,59 @@ namespace ProjectAkhirPABD
             jaminan.Show();
             this.Hide();
 
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                DialogResult result = MessageBox.Show("Anda yakin ingin menghapus data ini?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    string CustomerId = dataGridView1.SelectedRows[0].Cells["customer_id"].Value.ToString();
+
+                    try
+                    {
+                        using (SqlConnection koneksi = new SqlConnection(stringConnection))
+                        {
+                            koneksi.Open();
+
+                            // Hapus baris dari tabel "Customer"
+                            string deleteQuery = "DELETE FROM Customer WHERE customer_id = @customer_id";
+                            using (SqlCommand deleteCmd = new SqlCommand(deleteQuery, koneksi))
+
+                            {
+                                deleteCmd.Parameters.AddWithValue("@customer_id", CustomerId);
+                                deleteCmd.ExecuteNonQuery();
+                            }
+                                
+                            MessageBox.Show("Data berhasil dihapus", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            dataGridView();
+                            refreshform();
+                        }
+                            
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Terjadi kesalahan saat menghapus data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    finally
+                    {
+                        koneksi.Close();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Pilih data yang akan dihapus", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            HomePage homePage = new HomePage();
+            homePage.Show();
+            this.Close();
         }
     }
 }

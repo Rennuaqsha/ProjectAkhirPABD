@@ -252,6 +252,53 @@ namespace ProjectAkhirPABD
         {
 
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                DialogResult result = MessageBox.Show("Anda yakin ingin menghapus data ini?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    string IdPembayaran = dataGridView1.SelectedRows[0].Cells["id_pembayaran"].Value.ToString();
+
+                    try
+                    {
+                        using (SqlConnection koneksi = new SqlConnection(stringConnection))
+                        {
+                            koneksi.Open();
+
+                            // Hapus baris dari tabel "Pembayaran"
+                            string deleteQuery = "DELETE FROM Pembayaran WHERE id_pembayaran = @id_pembayaran";
+                            using (SqlCommand deleteCmd = new SqlCommand(deleteQuery, koneksi))
+                            {
+                                deleteCmd.Parameters.AddWithValue("@id_pembayaran", IdPembayaran);
+                                deleteCmd.ExecuteNonQuery();
+                            }
+                        }
+
+                        MessageBox.Show("Data berhasil dihapus", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        dataGridView();
+                        refreshform();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Terjadi kesalahan saat menghapus data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Pilih data yang akan dihapus", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            StatusKaryawan statkaryawan = new StatusKaryawan();
+            statkaryawan.Show();
+            this.Hide();
+        }
     }
 }
 

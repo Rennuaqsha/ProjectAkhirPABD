@@ -48,6 +48,8 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,20 +58,20 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label4.Font = new System.Drawing.Font("Impact", 19.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(280, 9);
+            this.label4.Location = new System.Drawing.Point(303, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(209, 41);
+            this.label4.Size = new System.Drawing.Size(189, 41);
             this.label4.TabIndex = 20;
-            this.label4.Text = "Nanang Futsal";
+            this.label4.Text = "Pembayaran";
             // 
             // Idbayar
             // 
             this.Idbayar.AutoSize = true;
             this.Idbayar.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Idbayar.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Idbayar.Location = new System.Drawing.Point(312, 94);
+            this.Idbayar.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Idbayar.Location = new System.Drawing.Point(320, 69);
             this.Idbayar.Name = "Idbayar";
-            this.Idbayar.Size = new System.Drawing.Size(133, 25);
+            this.Idbayar.Size = new System.Drawing.Size(117, 22);
             this.Idbayar.TabIndex = 21;
             this.Idbayar.Text = "Id Pembayaran";
             // 
@@ -77,10 +79,10 @@
             // 
             this.jnsPembayaran.AutoSize = true;
             this.jnsPembayaran.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.jnsPembayaran.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jnsPembayaran.Location = new System.Drawing.Point(312, 135);
+            this.jnsPembayaran.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jnsPembayaran.Location = new System.Drawing.Point(320, 110);
             this.jnsPembayaran.Name = "jnsPembayaran";
-            this.jnsPembayaran.Size = new System.Drawing.Size(158, 25);
+            this.jnsPembayaran.Size = new System.Drawing.Size(140, 22);
             this.jnsPembayaran.TabIndex = 22;
             this.jnsPembayaran.Text = "Jenis Pembayaran";
             // 
@@ -88,10 +90,10 @@
             // 
             this.TglTransaksi.AutoSize = true;
             this.TglTransaksi.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.TglTransaksi.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TglTransaksi.Location = new System.Drawing.Point(312, 171);
+            this.TglTransaksi.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TglTransaksi.Location = new System.Drawing.Point(320, 146);
             this.TglTransaksi.Name = "TglTransaksi";
-            this.TglTransaksi.Size = new System.Drawing.Size(158, 25);
+            this.TglTransaksi.Size = new System.Drawing.Size(141, 22);
             this.TglTransaksi.TabIndex = 23;
             this.TglTransaksi.Text = "Tanggal Transaksi";
             // 
@@ -99,10 +101,10 @@
             // 
             this.JmlahPem.AutoSize = true;
             this.JmlahPem.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.JmlahPem.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.JmlahPem.Location = new System.Drawing.Point(312, 210);
+            this.JmlahPem.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.JmlahPem.Location = new System.Drawing.Point(320, 185);
             this.JmlahPem.Name = "JmlahPem";
-            this.JmlahPem.Size = new System.Drawing.Size(174, 25);
+            this.JmlahPem.Size = new System.Drawing.Size(154, 22);
             this.JmlahPem.TabIndex = 24;
             this.JmlahPem.Text = "Jumlah Pembayaran";
             // 
@@ -110,10 +112,10 @@
             // 
             this.lmSewa.AutoSize = true;
             this.lmSewa.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lmSewa.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lmSewa.Location = new System.Drawing.Point(312, 251);
+            this.lmSewa.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lmSewa.Location = new System.Drawing.Point(320, 226);
             this.lmSewa.Name = "lmSewa";
-            this.lmSewa.Size = new System.Drawing.Size(102, 25);
+            this.lmSewa.Size = new System.Drawing.Size(89, 22);
             this.lmSewa.TabIndex = 25;
             this.lmSewa.Text = "Lama Sewa";
             // 
@@ -121,37 +123,37 @@
             // 
             this.CosId.AutoSize = true;
             this.CosId.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.CosId.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CosId.Location = new System.Drawing.Point(312, 298);
+            this.CosId.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CosId.Location = new System.Drawing.Point(320, 273);
             this.CosId.Name = "CosId";
-            this.CosId.Size = new System.Drawing.Size(113, 25);
+            this.CosId.Size = new System.Drawing.Size(99, 22);
             this.CosId.TabIndex = 26;
             this.CosId.Text = "Costumer id ";
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(491, 174);
+            this.dateTimePicker1.Location = new System.Drawing.Point(491, 146);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker1.TabIndex = 27;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(538, 94);
+            this.textBox1.Location = new System.Drawing.Point(541, 69);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(150, 22);
             this.textBox1.TabIndex = 28;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(538, 215);
+            this.textBox2.Location = new System.Drawing.Point(541, 187);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(150, 22);
             this.textBox2.TabIndex = 29;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(538, 256);
+            this.textBox3.Location = new System.Drawing.Point(541, 228);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(150, 22);
             this.textBox3.TabIndex = 30;
@@ -160,10 +162,10 @@
             // 
             this.KrywnId.AutoSize = true;
             this.KrywnId.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.KrywnId.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KrywnId.Location = new System.Drawing.Point(313, 341);
+            this.KrywnId.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KrywnId.Location = new System.Drawing.Point(321, 316);
             this.KrywnId.Name = "KrywnId";
-            this.KrywnId.Size = new System.Drawing.Size(112, 25);
+            this.KrywnId.Size = new System.Drawing.Size(98, 22);
             this.KrywnId.TabIndex = 32;
             this.KrywnId.Text = "Karyawan Id";
             // 
@@ -174,7 +176,7 @@
             "Cash",
             "eMob",
             "Transfer"});
-            this.comboBox1.Location = new System.Drawing.Point(538, 135);
+            this.comboBox1.Location = new System.Drawing.Point(541, 110);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(150, 24);
             this.comboBox1.TabIndex = 33;
@@ -182,8 +184,8 @@
             // Clear
             // 
             this.Clear.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Clear.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Clear.Location = new System.Drawing.Point(485, 393);
+            this.Clear.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Clear.Location = new System.Drawing.Point(697, 287);
             this.Clear.Name = "Clear";
             this.Clear.Size = new System.Drawing.Size(91, 35);
             this.Clear.TabIndex = 37;
@@ -194,8 +196,8 @@
             // Save
             // 
             this.Save.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Save.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Save.Location = new System.Drawing.Point(332, 393);
+            this.Save.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Save.Location = new System.Drawing.Point(697, 203);
             this.Save.Name = "Save";
             this.Save.Size = new System.Drawing.Size(91, 35);
             this.Save.TabIndex = 36;
@@ -206,8 +208,8 @@
             // Add
             // 
             this.Add.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Add.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Add.Location = new System.Drawing.Point(189, 393);
+            this.Add.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Add.Location = new System.Drawing.Point(697, 124);
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(91, 35);
             this.Add.TabIndex = 35;
@@ -218,10 +220,10 @@
             // Home
             // 
             this.Home.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Home.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Home.Location = new System.Drawing.Point(697, 189);
+            this.Home.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home.Location = new System.Drawing.Point(499, 403);
             this.Home.Name = "Home";
-            this.Home.Size = new System.Drawing.Size(91, 35);
+            this.Home.Size = new System.Drawing.Size(81, 35);
             this.Home.TabIndex = 38;
             this.Home.Text = "Home";
             this.Home.UseVisualStyleBackColor = false;
@@ -241,7 +243,7 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(538, 303);
+            this.comboBox2.Location = new System.Drawing.Point(539, 275);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(152, 24);
             this.comboBox2.TabIndex = 42;
@@ -249,10 +251,34 @@
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(538, 346);
+            this.comboBox3.Location = new System.Drawing.Point(541, 314);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(150, 24);
             this.comboBox3.TabIndex = 43;
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnBack.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(229, 403);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(78, 35);
+            this.btnBack.TabIndex = 45;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnDelete.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Location = new System.Drawing.Point(363, 403);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(74, 35);
+            this.btnDelete.TabIndex = 44;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // Pembayaran
             // 
@@ -262,6 +288,8 @@
             this.BackgroundImage = global::ProjectAkhirPABD.Properties.Resources.NanangFutsal;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.dataGridView1);
@@ -314,5 +342,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnDelete;
     }
 }
